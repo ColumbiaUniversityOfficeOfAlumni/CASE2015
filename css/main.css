@@ -1,0 +1,291 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+/* Colors */
+/* Micro clearfix via Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* For modern browsers */
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+/* Image replacement, from http://nicolasgallagher.com/another-css-image-replacement-technique/ */
+.ir {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+/* Flexbox media object */
+.media {
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: flex;
+  align-items: flex-start;
+}
+
+.media-figure {
+  margin-right: 1em;
+}
+
+.media-body {
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1;
+}
+
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+body {
+  color: #444;
+}
+
+body > * {
+  padding: 40px 0;
+}
+
+a, a:link {
+  text-decoration: none;
+  border-bottom: solid 1px transparent;
+}
+
+.blue {
+  background-color: #eaf4f9;
+}
+
+.crossword {
+  background-image: url(../img/crossword.png);
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1280px;
+  font-family: Roboto, sans;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+  font-weight: normal;
+  margin: 0;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3, h4 {
+  font-size: 30px;
+}
+
+h3 {
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  text-align: left;
+}
+
+p {
+  font-size: 18px;
+}
+
+img.lightbox {
+  cursor: pointer;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  background-color: #104d94;
+  padding: 20px 0;
+}
+footer a {
+  color: white;
+}
+
+header {
+  background-color: #0f74db;
+  background-image: url(../img/herringbone.png);
+  color: white;
+}
+header p {
+  text-align: center;
+  line-height: 1.3;
+}
+header a,
+header a:link {
+  color: white;
+  border-bottom-color: white;
+}
+header a:hover,
+header a:link:hover {
+  font-style: italic;
+}
+
+h1 {
+  background-image: url(../img/culogo.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 104px;
+  background-position: 50%;
+  background-size: contain;
+  margin: 0 auto 30px;
+}
+
+.objectives p {
+  text-align: center;
+}
+
+.stats p {
+  float: left;
+  width: 20%;
+  margin: 0 20px;
+  text-align: center;
+}
+.stats span {
+  font-size: 60px;
+  display: block;
+}
+
+/* Stats responsive */
+@media only screen and (max-width: 1220px) {
+  .stats p {
+    width: 45%;
+  }
+}
+.results h2 {
+  font-size: 36px;
+}
+.results .media {
+  float: left;
+  width: 30%;
+  margin: 20px 3% 20px 0;
+}
+.results .media:nth-child(3n+1) {
+  clear: left;
+}
+.results .media img {
+  width: 60px;
+  height: 60px;
+}
+.results h3 {
+  text-align: left;
+}
+.results img {
+  border-radius: 6px;
+}
+.results p {
+  margin: .25em 0;
+}
+
+/* Results responsive */
+@media only screen and (max-width: 1000px) {
+  .results .media {
+    width: 45%;
+  }
+  .results .media:nth-child(3n+1) {
+    clear: none;
+  }
+  .results .media:nth-child(2n+1) {
+    clear: left;
+  }
+}
+.approach article section {
+  padding-bottom: 20px;
+  float: left;
+  width: 31%;
+  margin: 20px 0 0 3%;
+}
+.approach article section:nth-child(3n+1) {
+  clear: left;
+  margin-left: 0;
+}
+.approach article img {
+  width: 100%;
+  height: auto;
+}
+.approach article h3 {
+  text-align: left;
+}
+.approach article a {
+  color: #444;
+  position: relative;
+  display: block;
+}
+.approach article .overlay {
+  background-color: rgba(16, 77, 148, 0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 1s ease;
+  color: transparent;
+}
+.approach article .overlay span {
+  position: absolute;
+  margin: 0 auto;
+  top: 40%;
+  left: 25%;
+  right: 25%;
+  display: block;
+  border: solid 1px transparent;
+  border-radius: 6px;
+  padding: 5px 0;
+  text-align: center;
+}
+.approach article a:hover .overlay {
+  background-color: rgba(16, 77, 148, 0.85);
+  color: white;
+  z-index: 10;
+}
+.approach article a:hover .overlay span {
+  border-color: white;
+  background-color: rgba(16, 77, 148, 0.75);
+}
+
+.item h3 {
+  text-align: left;
+}
+.item p {
+  margin-top: 0;
+  font-size: 24px;
+}
+.item .media-figure {
+  max-width: 40%;
+}
+.item a, .item a:link {
+  color: #104d94;
+}
+.item a:hover, .item a:link:hover {
+  border-bottom: solid 1px #104d94;
+}
+.item .button a {
+  border-radius: 6px;
+  background-color: #0f74db;
+  color: white;
+  padding: 5px 10px;
+  font-size: 24px;
+}
